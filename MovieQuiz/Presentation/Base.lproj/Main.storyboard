@@ -131,7 +131,7 @@
                         <outlet property="imageView" destination="ruR-Pg-dwL" id="9Lw-I1-XN2"/>
                         <outlet property="noButton" destination="tJu-ZR-7O8" id="5mP-9a-wJ5"/>
                         <outlet property="textLabel" destination="BOb-nZ-RjR" id="Wzd-36-AZE"/>
-                        <outlet property="yesButtom" destination="HdS-Wc-k6A" id="bpy-sQ-9az"/>
+                        <outlet property="yesButton" destination="HdS-Wc-k6A" id="vs6-1w-IQp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
