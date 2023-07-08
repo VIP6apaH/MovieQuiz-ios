@@ -7,10 +7,14 @@ final class AlertPresenter: ShowAlertProtocol { weak var alertDelegate: UIViewCo
     }
     
     func showAlert(alertModel: AlertModel) {
+        
         let alert = UIAlertController(
             title: alertModel.title,
             message: alertModel.text,
-            preferredStyle: .alert)
+            preferredStyle: .alert
+            )
+        
+       
         
         let action = UIAlertAction(
             title: alertModel.buttonText,
