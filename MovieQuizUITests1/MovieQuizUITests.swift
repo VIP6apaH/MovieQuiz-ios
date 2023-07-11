@@ -25,15 +25,20 @@ class MovieQuizUITests: XCTestCase {
         sleep(3)
         
         let firstPoster = app.images["Poster"]
+        sleep(3)
         let firstPosterData = firstPoster.screenshot().pngRepresentation
+        sleep(3)
         let indexLabel = app.staticTexts["Index"]
-        
+        sleep(3)
         app.buttons["Yes"].tap()
         sleep(3)
         
         XCTAssertEqual(indexLabel.label, "2/10")
+        sleep(3)
         let secondPoster = app.images["Poster"]
+        sleep(3)
         let secondPosterData = secondPoster.screenshot().pngRepresentation
+        sleep(3)
         
         XCTAssertNotEqual(firstPosterData, secondPosterData)
     }
@@ -42,15 +47,21 @@ class MovieQuizUITests: XCTestCase {
         sleep(3)
         
         let firstPoster = app.images["Poster"]
+        sleep(3)
         let firstPosterData = firstPoster.screenshot().pngRepresentation
+        sleep(3)
         let indexLabel = app.staticTexts["Index"]
+        sleep(3)
         
         app.buttons["No"].tap()
         sleep(3)
         
         XCTAssertEqual(indexLabel.label, "2/10")
+        sleep(3)
         let secondPoster = app.images["Poster"]
+        sleep(3)
         let secondPosterData = secondPoster.screenshot().pngRepresentation
+        sleep(3)
         
         XCTAssertNotEqual(firstPosterData, secondPosterData)
     }
@@ -62,9 +73,12 @@ class MovieQuizUITests: XCTestCase {
         }
         sleep(2)
         let alert = app.alerts["Этот раунд окончен!"]
+        sleep(3)
         
         XCTAssertTrue(alert.exists)
+        sleep(3)
         XCTAssertTrue(alert.label == "Этот раунд окончен!")
+        sleep(3)
         XCTAssertTrue(alert.buttons.firstMatch.label == "Сыграть ещё раз")
     }
 
@@ -76,13 +90,16 @@ class MovieQuizUITests: XCTestCase {
         }
         sleep(2)
         let alert = app.alerts["Этот раунд окончен!"]
+        sleep(3)
         alert.buttons.firstMatch.tap()
         
         sleep(2)
         
         let indexLabel = app.staticTexts["Index"]
+        sleep(3)
         
         XCTAssertFalse(alert.exists)
+        sleep(3)
         XCTAssertTrue(indexLabel.label == "1/10")
     }
 }
